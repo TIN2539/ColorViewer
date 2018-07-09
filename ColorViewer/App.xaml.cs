@@ -1,17 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
+using ColorViewer.Models;
+using ColorViewer.ViewModels;
+using ColorViewer.Views;
 
 namespace ColorViewer
 {
-	/// <summary>
-	/// Interaction logic for App.xaml
-	/// </summary>
-	public partial class App : Application
+	internal sealed partial class App : Application
 	{
+		protected override void OnStartup(StartupEventArgs e)
+		{
+			base.OnStartup(e);
+
+			var colorManager = new ColorManager();
+			var viewModelFactory = new ViewModelFactory(colorManager);
+			var mainViewModel = new MainWindowViewModel(colorManager, viewModelFactory);
+			var view = new MainWindowView(mainViewModel);
+			view.Show();
+		}
 	}
 }

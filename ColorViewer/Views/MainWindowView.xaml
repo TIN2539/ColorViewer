@@ -7,8 +7,8 @@
         MinWidth="300" MinHeight="250">
     <Grid Margin="5">
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*" MinHeight="130"/>
-            <RowDefinition  Height="2*" MinHeight="120"/>
+            <RowDefinition Height="Auto" MinHeight="130"/>
+            <RowDefinition  Height="1*" MinHeight="120"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <Grid.RowDefinitions>
@@ -86,7 +86,6 @@
                 <TextBlock Background="{Binding Path=SolidColor, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
             </DockPanel>
         </Grid>
-
         <ListBox Grid.Row="1" Margin="0,5,0,0" ItemsSource="{Binding Path=Colors}" HorizontalContentAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto">
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -103,6 +102,5 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-
     </Grid>
 </Window>

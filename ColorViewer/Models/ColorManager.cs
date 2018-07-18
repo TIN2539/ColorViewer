@@ -11,7 +11,6 @@ namespace ColorViewer.Models
 		public IEnumerable<Color> Colors => colors;
 
 		public event EventHandler<ColorEventArgs> ColorAdded;
-
 		public event EventHandler<ColorEventArgs> ColorDeleted;
 
 		public void AddColor(Color color)

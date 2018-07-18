@@ -8,11 +8,11 @@ namespace ColorViewer.Models
 	{
 		private readonly ICollection<Color> colors = new List<Color>();
 
+		public IEnumerable<Color> Colors => colors;
+
 		public event EventHandler<ColorEventArgs> ColorAdded;
 
 		public event EventHandler<ColorEventArgs> ColorDeleted;
-
-		public IEnumerable<Color> Colors => colors;
 
 		public void AddColor(Color color)
 		{

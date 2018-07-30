@@ -19,11 +19,11 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="1*" MinWidth="50"/>
-                <ColumnDefinition Width="1*" MinWidth="50"/>
+                <ColumnDefinition Width="Auto" MaxWidth="50"/>
+                <ColumnDefinition Width="1*" MinWidth="50" MaxWidth="50"/>
+                <ColumnDefinition Width="1*" MinWidth="50" MaxWidth="50"/>
                 <ColumnDefinition Width="8*"/>
-                <ColumnDefinition Width="0.6*" MinWidth="30"/>
+                <ColumnDefinition Width="0.6*" MinWidth="30" MaxWidth="30"/>
             </Grid.ColumnDefinitions>
 
             <DockPanel Grid.Column="0" Grid.Row="0">
@@ -91,9 +91,9 @@
                 <DataTemplate>
                     <Grid Margin="5">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*" MaxWidth="60"/>
                             <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*" MaxWidth="50"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Text="{Binding Path=Name}"></TextBlock>
                         <TextBlock Margin="5,0,5,0" Grid.Column="1" Background="{Binding Path=Name}"></TextBlock>

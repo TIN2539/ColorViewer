@@ -1,7 +1,7 @@
-﻿using System.Windows;
-using ColorViewer.Models;
+﻿using ColorViewer.Models;
 using ColorViewer.ViewModels;
 using ColorViewer.Views;
+using System.Windows;
 
 namespace ColorViewer
 {
